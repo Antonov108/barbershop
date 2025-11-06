@@ -1,0 +1,14 @@
+{
+  "name": "vibe-barbershop",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3001",
+    "dev": "live-server --port=3000",
+    "start": "concurrently \"npm run server\" \"npm run dev\""
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4",
+    "live-server": "^1.2.2",
+    "concurrently": "^8.2.2"
+  }
+}

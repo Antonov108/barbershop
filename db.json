@@ -1,0 +1,179 @@
+{
+  "masters": [
+    {
+      "name": "Валентин",
+      "photo": "valentyn.jpg",
+      "experience": "старший мастер",
+      "specialization": "старший мастер",
+      "schedule": {
+        "start": "10:00",
+        "end": "20:00",
+        "days": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "id": 1
+    },
+    {
+      "name": "Ева",
+      "photo": "",
+      "experience": "младший мастер",
+      "specialization": "младший мастер",
+      "schedule": {
+        "start": "10:00",
+        "end": "20:00",
+        "days": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Ника",
+      "experience": "младший мастер",
+      "photo": "",
+      "specialization": "младший мастер",
+      "schedule": {
+        "start": "10:00",
+        "end": "20:00",
+        "days": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Ева2",
+      "experience": "младший мастер",
+      "photo": "",
+      "specialization": "младший мастер",
+      "schedule": {
+        "start": "10:00",
+        "end": "20:00",
+        "days": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Стас",
+      "experience": "младший мастер",
+      "photo": "",
+      "specialization": "младший мастер",
+      "schedule": {
+        "start": "10:00",
+        "end": "20:00",
+        "days": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Андрей",
+      "experience": "младший мастер",
+      "photo": "",
+      "specialization": "младший мастер",
+      "schedule": {
+        "start": "10:00",
+        "end": "20:00",
+        "days": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Машинка + ножницы",
+      "price": "25",
+      "duration": "45"
+    },
+    {
+      "id": 2,
+      "name": "Машинка",
+      "price": "20",
+      "duration": "30"
+    },
+    {
+      "id": 3,
+      "name": "Удлиненная стрижка",
+      "price": "25-30",
+      "duration": "60"
+    },
+    {
+      "id": 4,
+      "name": "Борода",
+      "price": "15",
+      "duration": "30"
+    },
+    {
+      "id": 5,
+      "name": "Стрижка с бородой",
+      "price": "30",
+      "duration": "60"
+    }
+  ],
+  "bookings": [
+    {
+      "date": "2025-11-06",
+      "time": "10:00",
+      "master_id": 1,
+      "service_name": "Машинка",
+      "client_name": "fgn,",
+      "client_phone": "+3244444444444",
+      "status": "подтверждена",
+      "created_at": "2025-11-06T20:48:24.381Z",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "vibe@gmail.com",
+      "password": "admin123",
+      "name": "Администратор Vibe",
+      "role": "admin",
+      "phone": "+32 470 12 34 56"
+    }
+  ],
+  "shop": {
+    "name": "Vibe BarberShop",
+    "address": "Avenue Van Volxem 248 Sint Gilis, Brussels, Belgium",
+    "workHours": "Пн-Вс(Вт выходной): 10:00-20:00",
+    "instagram": "@vibe.barbershop.be",
+    "phone": "+32 470 12 34 56",
+    "email": "vibe@barbershop.be"
+  }
+}

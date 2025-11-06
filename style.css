@@ -84,7 +84,7 @@ body {
     width: 120px;
     height: 120px;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%); /* Коричневый градиент */
+    background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -117,7 +117,7 @@ body {
     margin-top: 20px;
 }
 
-/* iOS-style стекломорфные карточки */
+/* Карточки */
 .card {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
@@ -165,30 +165,11 @@ body {
     color: #ffffff;
 }
 
-.admin-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    color: #ffffff;
-}
-
-.admin-logout-btn {
-    background: rgba(160, 82, 45, 0.8); /* Коричневый */
-    color: #ffffff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 14px;
-    backdrop-filter: blur(10px);
-}
-
 /* Сетка барберов */
 .barber-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
     margin-top: 15px;
 }
 
@@ -196,46 +177,103 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 180px;
+    justify-content: center;
 }
 
 .barber-card:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     color: #ffffff;
 }
 
 .barber-card.selected {
-    background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(165, 42, 42, 0.3) 100%); /* Коричневый градиент */
-    border-color: rgba(139, 115, 85, 0.5); /* Коричневый */
-    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3); /* Коричневый */
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(165, 42, 42, 0.3) 100%);
+    border-color: rgba(139, 115, 85, 0.5);
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3);
     color: #ffffff;
 }
 
-.barber-card .photo {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    opacity: 0.9;
-    color: #ffffff;
+/* Стили для фото мастеров - УМЕНЬШЕННЫЕ РАЗМЕРЫ */
+.photo-container {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barber-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.barber-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 50%;
+    color: white;
 }
 
 .barber-card .name {
     font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
+    margin-bottom: 4px;
+    font-size: 1rem;
     color: #ffffff;
 }
 
 .barber-card .experience {
-    font-size: 0.85rem;
-    opacity: 0.7;
+    font-size: 0.75rem;
+    opacity: 0.8;
     color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.barber-card .specialization {
+    color: #888;
+    font-size: 0.7rem;
+    margin-bottom: 6px;
+    opacity: 0.7;
+}
+
+.availability {
+    font-size: 0.7rem;
+    color: #22c55e;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.master-schedule-today {
+    margin-top: 6px;
+    padding: 3px 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-size: 9px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.master-schedule-today small {
+    font-size: 8px;
 }
 
 /* Сетка дат */
@@ -265,8 +303,8 @@ body {
 }
 
 .date-btn.selected {
-    background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(165, 42, 42, 0.3) 100%); /* Коричневый градиент */
-    border-color: rgba(139, 115, 85, 0.5); /* Коричневый */
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(165, 42, 42, 0.3) 100%);
+    border-color: rgba(139, 115, 85, 0.5);
     color: #ffffff;
 }
 
@@ -318,8 +356,8 @@ body {
 }
 
 .time-btn.selected {
-    background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(165, 42, 42, 0.3) 100%); /* Коричневый градиент */
-    border-color: rgba(139, 115, 85, 0.5); /* Коричневый */
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(165, 42, 42, 0.3) 100%);
+    border-color: rgba(139, 115, 85, 0.5);
     color: #ffffff;
 }
 
@@ -352,8 +390,8 @@ body {
 }
 
 .service-card.selected {
-    background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(165, 42, 42, 0.3) 100%); /* Коричневый градиент */
-    border-color: rgba(139, 115, 85, 0.5); /* Коричневый */
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(165, 42, 42, 0.3) 100%);
+    border-color: rgba(139, 115, 85, 0.5);
     color: #ffffff;
 }
 
@@ -389,24 +427,6 @@ body {
     color: #ffffff;
 }
 
-/* Для очень длинных названий услуг */
-@media (max-width: 480px) {
-    .service-card {
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-    }
-    
-    .service-info {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    
-    .service-price {
-        text-align: center;
-    }
-}
-
 /* Формы */
 .form-group {
     margin-bottom: 25px;
@@ -438,13 +458,13 @@ body {
 .form-input:focus {
     outline: none;
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(139, 115, 85, 0.5); /* Коричневый */
-    box-shadow: 0 0 0 2px rgba(139, 115, 85, 0.2); /* Коричневый */
+    border-color: rgba(139, 115, 85, 0.5);
+    box-shadow: 0 0 0 2px rgba(139, 115, 85, 0.2);
     color: #ffffff;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%); /* Коричневый градиент */
+    background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%);
     color: #ffffff;
     border: none;
     padding: 18px 30px;
@@ -454,12 +474,12 @@ body {
     font-weight: 600;
     width: 100%;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3); /* Коричневый */
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 35px rgba(139, 115, 85, 0.4); /* Коричневый */
+    box-shadow: 0 12px 35px rgba(139, 115, 85, 0.4);
     color: #ffffff;
 }
 
@@ -484,22 +504,22 @@ body {
 
 /* Сообщения */
 .success-message {
-    background: rgba(139, 115, 85, 0.1); /* Коричневый */
+    background: rgba(139, 115, 85, 0.1);
     color: #ffffff;
     padding: 20px;
     border-radius: 15px;
     margin-top: 25px;
-    border: 1px solid rgba(139, 115, 85, 0.2); /* Коричневый */
+    border: 1px solid rgba(139, 115, 85, 0.2);
     backdrop-filter: blur(10px);
 }
 
 .error-message {
-    background: rgba(165, 42, 42, 0.1); /* Темно-красный */
+    background: rgba(165, 42, 42, 0.1);
     color: #ffffff;
     padding: 20px;
     border-radius: 15px;
     margin-top: 25px;
-    border: 1px solid rgba(165, 42, 42, 0.2); /* Темно-красный */
+    border: 1px solid rgba(165, 42, 42, 0.2);
     backdrop-filter: blur(10px);
 }
 
@@ -515,111 +535,639 @@ body {
 .loading {
     text-align: center;
     padding: 30px;
-    color: #8B7355; /* Коричневый */
+    color: #8B7355;
     font-size: 1.1rem;
 }
 
-/* Админ панель */
-.schedule-item {
+.booking-summary {
     background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
     border-radius: 15px;
-    padding: 25px;
     margin-bottom: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #8B7355;
     backdrop-filter: blur(10px);
     color: #ffffff;
 }
 
-.schedule-header {
+/* === АДМИН-ПАНЕЛЬ СТИЛИ === */
+
+.admin-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.admin-header h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.admin-logout-btn {
+    background: #8B7355;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.admin-logout-btn:hover {
+    background: #A52A2A;
+}
+
+.admin-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.schedule-header h4 {
+.admin-card h2 {
     color: #ffffff;
-    margin: 0;
-    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #8B7355;
+    padding-bottom: 10px;
 }
 
-.btn-edit {
-    background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%); /* Коричневый градиент */
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 500;
+/* Навигация */
+.navigation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
 }
 
-.time-inputs {
+.nav-btn {
+  padding: 12px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.nav-btn.active {
+  background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%);
+  color: white;
+  border-color: #8B7355;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Отзывы */
+.reviews-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reviews-stats {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.average-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.rating-stars {
+  color: #ffc107;
+  font-size: 24px;
+}
+
+.rating-text {
+    color: #ffffff;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.review-card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-client {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stars {
+  color: #ffc107;
+}
+
+.review-date {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.review-comment {
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.add-review {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin-top: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.rating-selector {
+  display: flex;
+  gap: 5px;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffc107;
+  padding: 5px;
+}
+
+/* Форма отзыва */
+textarea.form-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Информационное сообщение */
+.info-message {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* Недоступные даты */
+.date-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.unavailable {
+  font-size: 10px;
+  color: #ff4444;
+  margin-top: 4px;
+}
+
+.time-unavailable {
+    font-size: 10px;
+    color: #ff4444;
+    margin-top: 4px;
+}
+
+.time-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Логотип с кастомным шрифтом */
+.logo {
+  font-family: 'Arial Black', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+/* Админка отзывов */
+.reviews-admin {
+  display: grid;
+  gap: 16px;
+}
+
+.review-admin-card {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.review-admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.review-admin-header .review-client {
+    color: #ffffff;
+}
+
+.review-admin-header .review-rating {
+    color: #ffc107;
+}
+
+.review-admin-header .review-date {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.review-comment {
+    color: #ffffff;
+}
+
+/* Статистика */
+.admin-stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.days-selector {
-    display: flex;
-    gap: 8px;
+.stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item:hover {
+    transform: translateY(-2px);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8B7355;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.master-info {
+  opacity: 1 !important;
+  color: #ffffff;
+}
+
+.schedule-time, .schedule-days {
+  opacity: 1 !important;
+  color: #ffffff;
+}
+
+.service-duration{
+  opacity: 1 !important;
+  color: #ffffff;
+}
+
+/* Управление мастерами */
+.masters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
     margin-top: 15px;
 }
 
-.day-btn {
-    flex: 1;
-    padding: 12px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
+.master-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
     transition: all 0.3s ease;
-    color: #ffffff;
     backdrop-filter: blur(10px);
 }
 
-.day-btn.active {
-    background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%); /* Коричневый градиент */
-    color: #ffffff;
-    border-color: #8B7355; /* Коричневый */
+.master-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
 }
 
-.action-buttons {
+.master-header {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.master-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.master-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit, .btn-delete {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-edit:hover {
+    background: #28a745;
+    border-color: #28a745;
+}
+
+.btn-delete:hover {
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+.master-info {
+    font-size: 0.9rem;
+    color: #ffffff;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.master-schedule {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-time, .schedule-days {
+    font-size: 0.85rem;
+    color: #ffffff;
+    opacity: 0.7;
+    margin-bottom: 3px;
+}
+
+.master-bookings {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #8B7355;
+    font-weight: 500;
+}
+
+/* Стили для фото в админке тоже уменьшаем */
+.admin-master-photo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.admin-master-photo-placeholder {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #8B7355 0%, #A52A2A 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-radius: 8px;
+    color: white;
+}
+
+/* Форма мастера */
+.master-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.master-form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.master-form h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
-    margin-top: 25px;
+}
+
+.days-selector {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.day-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.day-checkbox input {
+    margin: 0;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-actions .btn-primary {
+    width: auto;
+    flex: 1;
+}
+
+.form-actions .btn-secondary {
+    width: auto;
+    flex: 1;
 }
 
 /* Таблица записей */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
 .bookings-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     backdrop-filter: blur(10px);
-    color: #ffffff;
 }
 
 .bookings-table th,
 .bookings-table td {
-    padding: 15px 20px;
+    padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     color: #ffffff;
 }
 
 .bookings-table th {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     font-weight: 600;
     color: #ffffff;
 }
 
 .bookings-table tr:hover {
     background: rgba(255, 255, 255, 0.05);
+}
+
+.table-actions {
+    margin-top: 15px;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.btn-call {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.btn-call:hover {
+    background: #218838;
+}
+
+/* Список услуг в админке */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-name {
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.service-duration {
+    font-size: 0.9rem;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.service-price {
+    font-weight: bold;
+    color: #8B7355;
+    margin-right: 15px;
+}
+
+.service-bookings {
+    font-size: 0.85rem;
+    color: #8B7355;
 }
 
 /* Форма входа */
@@ -634,16 +1182,6 @@ body {
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-}
-
-.booking-summary {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    border-left: 4px solid #8B7355; /* Коричневый */
-    backdrop-filter: blur(10px);
     color: #ffffff;
 }
 
@@ -673,16 +1211,36 @@ body {
 
 @media (max-width: 768px) {
     .barber-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
     }
     
-    .time-inputs {
-        grid-template-columns: 1fr;
+    .barber-card {
+        padding: 12px;
+        min-height: 160px;
+    }
+    
+    .photo-container {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 6px;
+    }
+    
+    .barber-photo-placeholder {
+        font-size: 20px;
+    }
+    
+    .barber-card .name {
+        font-size: 0.9rem;
+    }
+    
+    .barber-card .experience, .barber-card .specialization, .availability {
+        font-size: 0.65rem;
     }
     
     .admin-header {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         text-align: center;
     }
     
@@ -703,9 +1261,49 @@ body {
     .header {
         padding-top: 10px;
     }
+    
+    .masters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .days-selector {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .bookings-table {
+        font-size: 0.8rem;
+    }
+    
+    .bookings-table th,
+    .bookings-table td {
+        padding: 8px 10px;
+    }
 }
 
 @media (max-width: 480px) {
+    .barber-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 8px;
+    }
+    
+    .barber-card {
+        padding: 10px;
+        min-height: 150px;
+    }
+    
+    .photo-container {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .barber-photo-placeholder {
+        font-size: 18px;
+    }
+    
     .service-card {
         flex-direction: column;
         align-items: stretch;
@@ -724,6 +1322,24 @@ body {
     .contact-header {
         width: 100%;
         padding: 15px;
+    }
+    
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .service-price {
+        margin-right: 0;
+    }
+    
+    .days-selector {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -749,4 +1365,8 @@ body {
 
 .contact-header {
     animation: fadeIn 0.8s ease-out;
+}
+
+.master-card, .service-item {
+    animation: fadeIn 0.5s ease-out;
 }
